@@ -22,8 +22,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-  "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-   "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
